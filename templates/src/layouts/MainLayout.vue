@@ -4,7 +4,7 @@
     :style="{ height: $q.screen.height, width: $q.screen.width }"
   >
     <q-header reveal elevated class="bg-primary text-white">
-      <q-toolbar class="main-headers text-white shadow-18 rounded-borders">
+      <q-toolbar class="main-headers text-white  rounded-borders">
         <transition appear enter-active-class="animated zoomIn">
           <q-btn flat @click="drawerleft = !drawerleft" round dense icon="menu">
             <q-tooltip
@@ -16,117 +16,10 @@
           </q-btn>
         </transition>
         <transition appear enter-active-class="animated zoomIn">
-          <q-toolbar-title shrink class="text-weight-bold" @click="$router.push({ name: 'web_index' })">{{
-            $t("index.title")
-          }}</q-toolbar-title>
+          <q-toolbar-title shrink class="text-weight-bold" @click="$router.push({ name: 'web_index' })">CLA WMS</q-toolbar-title>
         </transition>
         <q-space />
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            v-show="lang !== 'zh-hans'"
-            icon="img:statics/icons/IOS.png"
-            round
-            dense
-            flat
-            @click="brownlink('https://www.56yhz.com/ios.html')"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >IOS APP
-            </q-tooltip>
-          </q-btn>
-        </transition>
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            v-show="lang === 'zh-hans'"
-            icon="img:statics/icons/IOS.png"
-            round
-            dense
-            flat
-            @click="brownlink('https://www.56yhz.com/zh/ios.html')"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >IOS APP
-            </q-tooltip>
-          </q-btn>
-        </transition>
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            v-show="lang !== 'zh-hans'"
-            icon="img:statics/icons/android.png"
-            round
-            dense
-            flat
-            @click="brownlink('https://www.56yhz.com/android.html')"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >Android APP
-            </q-tooltip>
-          </q-btn>
-        </transition>
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            v-show="lang === 'zh-hans'"
-            icon="img:statics/icons/android.png"
-            round
-            dense
-            flat
-            @click="brownlink('https://www.56yhz.com/zh/android.html')"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >Android APP
-            </q-tooltip>
-          </q-btn>
-        </transition>
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            icon="img:statics/icons/GitHub.png"
-            round
-            dense
-            flat
-            @click="brownlink('https://github.com/GreaterWMS/GreaterWMS')"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >GitHub Link</q-tooltip
-            >
-          </q-btn>
-        </transition>
-        <transition appear enter-active-class="animated zoomIn">
-          <q-btn
-            icon="api"
-            round
-            dense
-            flat
-            @click="apiLink()"
-            style="margin: 0 10px 0 10px"
-          >
-            <q-tooltip
-              content-class="bg-amber text-black shadow-4"
-              :offset="[15, 15]"
-              content-style="font-size: 12px"
-              >{{ $t('index.api') }}</q-tooltip
-            >
-          </q-btn>
-        </transition>
+
         <transition appear enter-active-class="animated zoomIn">
           <q-btn
             square

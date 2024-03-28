@@ -1,0 +1,2 @@
+run backend 
+daphne -p 8008 greaterwms.asgi:application
